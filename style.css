@@ -3,36 +3,66 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --poppins: 'Poppins', sans-serif;
+    --lobster:'Lobster', cursive;
+    --tilt:'Tilt Prism', cursive;
+
+}
 body{
    
    
-    height: 200vh;
+    height: 300vh;
     margin: 0px;
+    background-color: #1c1c1c;
+    font-family: var(--poppins);
+
+}
+.titulo{
     
+    color: rgba(33, 212, 174, 0.856);
+    text-align: center;
+    background-color: #1c1c1c;
+    margin: auto;
+    padding: 15px 20px;
+    font-size: 60px;
+    font-family: var(--lobster);
+    text-shadow: 1px 1px 3px white;
+    
+}
+.subtitulo{
+    color: white;
+    display: block;
+    max-width: 800px;
+    margin: 10px 20px;
+    text-align: center;
 }
 .container1{
   
     /* background-color: aqua; */
     display: flex;
-    margin: 0 auto;
+    margin: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     max-width: 900px;
-    background-color: red;
+    background-color:#1c1c1c;
+    /* background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%); */
 
 }
 .card{
+    cursor: pointer;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 34px;
-    width: 50%;
+    width: 70%;
     height: 500px;
     margin: 10px;
     /* flex: 0.5; */
     position: relative;
+    /* box-shadow: 4px 4px 8px #6263609f; */
     transition: all  700ms ease-in;
     
    
@@ -40,8 +70,14 @@ body{
 }
 h3{
     color: white;
+    margin: 20px ;
+    font-family: var(--poppins);
+    font-size: 1rem;
+}
+h3 + p {
+    color: white;
    
-    /* position:absolute;  */
+    position:absolute; 
    
     bottom: 20px;
     left: 20px;
@@ -53,10 +89,15 @@ h3{
     
 
 }
+p{
+    font-size: 14px;
+    font-family: var(--poppins);
+}
 
-.card.activa h3{
+.card.activa h3 + p{
 
  opacity: 1;
+
 
 
 
@@ -65,5 +106,22 @@ h3{
    
   
     width: 90%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply !important;
     /* flex: 5;  */
+}
+
+.wave{
+    height: 100px;
+    width: 100%;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+.wave-top{
+    background-image: url(./images/top.svg);
+}
+.wave-bottom{
+    background-image: url(./images/bottom.svg);
 }
